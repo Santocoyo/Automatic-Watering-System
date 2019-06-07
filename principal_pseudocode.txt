@@ -1,0 +1,19 @@
+ Humedad de tierra mínima = 10;
+ Humedad de Aire mínima = 30;
+ Temperatura Máxima = 35;
+ Se verifica sensor de Humedad de Tierra cada 1 Segundo;
+ Se verifica sensor de Temperatura y Aire cada 5 Segundos;
+ Si Humedad de Tierra < Humedad de Tierra Mínima entonces:
+ 	Si Mensaje Alerta = Verdadero entonces:
+ 		Mostrar Mensaje “Humedad de Tierra Baja”;
+ 	Activar Riego durante 6 segundos;
+ Si Humedad de Aire < Humedad de Aire Mínima entonces:
+ 	Si Humedad de Tierra < 60 entonces
+ 		Si Mensaje Alerta = Verdadero entonces:
+	 		Mostrar Mensaje “Humedad de Aire Baja”;
+ 		Activar Riego durante 3 segundos;
+ Si Temperatura > Temperatura Máxima entonces:
+ 	Si Humedad de Tierra < 60 entonces:
+ 		Si Mensaje Alerta = Verdadero entonces:
+ 			Mostrar Mensaje “Temperatura Alta”
+ 		Activar Riego durante 2 segundos;
